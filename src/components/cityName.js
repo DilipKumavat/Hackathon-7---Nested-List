@@ -11,7 +11,7 @@ function City(props){
 
     return (
         <div>
-        <button  key={`city${props.idx}`} onClick={showTown}>{props.Name}</button>
+        <button onClick={showTown}>{props.Name}</button>
         {
             !showSubTown ? null : townName.map((townName,idx)=>(
                 <Town Name={townName.name} key={`town${idx}`}/>
