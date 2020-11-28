@@ -6,12 +6,12 @@ function City(props){
 
     const showTown= ()=>{
         setshowSubTown(true);
-        console.log(props.town);
+        
     }
 
     return (
         <div>
-        <button onClick={showTown}>{props.Name}</button>
+        <button id={`city${props.idx}`} onClick={showTown}>{props.Name}</button>
         {
             !showSubTown ? null : townName.map((townName,idx)=>(
                 <Town Name={townName.name} key={`town${idx}`} id={`town${idx}`}/>
