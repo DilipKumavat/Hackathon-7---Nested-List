@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import "./../styles/App.css";
-
+import StateName from './statesName';
 // Do not alter the states const and values inside it.
 const states = [
   {
@@ -155,7 +155,19 @@ const states = [
 ];
 
 function App() {
-  return <div id="main"></div>;
-}
+  return (<div id="main">
+  {states.map((element,idx) => (
+    <StateName key={`state${idx}`} Name={element.name} city={element.cities} cityName={element.cities.towns}/>
+    
+   
+  ))}
 
+  </div>);
+}
+// <button>{states[0].name}</button><br/>
+//   {states[1].name}
+
+// console.log(element.name),
+//     console.log(element.cities),
+//     console.log(element.cities.name),
 export default App;
