@@ -14,7 +14,7 @@ function StateName (props){
             <button onClick={showCity}>{props.Name}</button>
             {
                 !thisCity ? null : showCityName.map((element,idx)=>(<ul>
-                   <li> <City key={`city${idx}`} idx={idx} Name={element.name} town={element.towns} /></li>
+                   <li> <City key={`city${idx}`} id={`city${idx}`} idx={idx} Name={element.name} town={element.towns} /></li>
                     </ul>
                 ))
             }

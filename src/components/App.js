@@ -157,7 +157,7 @@ const states = [
 function App() {
   return (<div id="main">
   {states.map((element,idx) => (
-    <StateName key={`state${idx}`} Name={element.name} city={element.cities} cityName={element.cities.towns}/>
+    <StateName key={`state${idx}`} id={`state${idx}`} Name={element.name} city={element.cities} cityName={element.cities.towns}/>
     
    
   ))}
