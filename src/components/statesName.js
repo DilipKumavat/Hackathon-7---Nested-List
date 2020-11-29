@@ -16,10 +16,10 @@ function StateName (props){
     return (
         <div>
             
-            <button onClick={showCity} id={`state${props.idx}`}>{props.Name}</button>
+            <button onClick={showCity} id={`state${props.idx+1}`}>{props.Name}</button>
             {
                 !thisCity ? null : showCityName.map((element,idx)=>(<ul>
-                   <li> <City key={`city${idx}`} id={`city${idx}`} idx={idx} Name={element.name} idx={idx}town={element.towns} onClick={Toggle}/></li>
+                   <li> <City key={`city${idx}`} id={`city${idx+1}`} idx={idx} Name={element.name} idx={idx}town={element.towns} onClick={Toggle}/></li>
                     </ul>
                 ))
             }
