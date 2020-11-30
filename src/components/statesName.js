@@ -13,13 +13,13 @@ function StateName (props){
         <div>
             
             <button onClick={showCity} id={`state${props.idx+1}`}>{props.Name}</button>
+            <ol>
             {
-                !thisCity ? null : showCityName.map((element,idx)=>(<ul>
-                   <li> <City key={`city${idx+1}`} id={`city${idx+1}`} idx={idx} Name={element.name} idx={idx} town={element.towns} /></li>
-                    </ul>
+                !thisCity ? null : showCityName.map((element,idx)=>(
+                   <li><City key={`city${idx+1}`} id={`city${idx+1}`} idx={idx} Name={element.name} idx={idx} town={element.towns} /></li>
                 ))
             }
-            
+            </ol>
         </div>
     )
 } 
