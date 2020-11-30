@@ -5,12 +5,12 @@ function City(props){
     const [showSubTown, setshowSubTown] = useState(false);
 
     const showTown= ()=>{
-        setshowSubTown(true);
-        
+        setshowSubTown(!showSubTown);
     }
 
     return (
         <div>
+        
         <button id={`city${props.idx+1}`} key={`city${props.idx+1}`} onClick={showTown}>{props.Name}</button>
         {
             !showSubTown ? null : townName.map((townName,idx)=>(
