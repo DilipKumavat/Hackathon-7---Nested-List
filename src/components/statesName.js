@@ -2,7 +2,9 @@ import React,{useState} from 'react';
 import City from './cityName';
 function StateName (props){
     const [thisCity, setthisCity] = useState(false);
+    const [list, setlist] = useState(false);
     const showCity = (idx)=>{
+        setlist(!list);
         setthisCity(!thisCity);
         
     }
@@ -11,13 +13,15 @@ function StateName (props){
         <div>
             
             <button onClick={showCity} id={`state${props.idx+1}`}>{props.Name}</button>
-            <ol>
             {
-                !thisCity && !props.ctoggle ? null : showCityName.map((element,idx)=>(
-                   <li><City key={`city${idx+1}`} id={`city${idx+1}`} idx={idx} Name={element.name} idx={idx} town={element.towns} /></li>
-                ))
+                !list ? null : <ol>
+                {
+                    !thisCity && !props.ctoggle ? null : showCityName.map((element,idx)=>(
+                       <li><City key={`city${idx+1}`} id={`city${idx+1}`} idx={idx} Name={element.name} idx={idx} town={element.towns} /></li>
+                    ))
+                }
+                </ol>
             }
-            </ol>
         </div>
     )
 } 
