@@ -5,8 +5,6 @@ function StateName (props){
     const showCity = (idx)=>{
         setthisCity(!thisCity);
         
-        return 
-        
     }
     const [showCityName, setshowCityName] = useState(props.city)
     return (
@@ -15,7 +13,7 @@ function StateName (props){
             <button onClick={showCity} id={`state${props.idx+1}`}>{props.Name}</button>
             <ol>
             {
-                !thisCity ? null : showCityName.map((element,idx)=>(
+                !thisCity && !props.ctoggle ? null : showCityName.map((element,idx)=>(
                    <li><City key={`city${idx+1}`} id={`city${idx+1}`} idx={idx} Name={element.name} idx={idx} town={element.towns} /></li>
                 ))
             }
